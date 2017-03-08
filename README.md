@@ -1,5 +1,5 @@
 # Interactive shell
-``` 
+```python 
 3+2
 x = 12
 print('hello world')
