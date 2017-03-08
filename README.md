@@ -1,5 +1,4 @@
 # Interactive shell
-
 ``` 
 3+2
 x = 12
@@ -8,7 +7,6 @@ age = int(input("How old are you? "))   # explicit cast to int or float if neede
 ```
 
 # Assignment
-
 ```
 a = [1, 2, 3]
 b = a
@@ -17,14 +15,12 @@ print(b) #[1, 2, 3, 4], b = a does not make a copy of a but makes b reference to
 ```
 
 # Multiple assignment
-
 ```
 a1,a2,a3 = 2,5,6
 a1 = a2 = a3 = 5
 ```
 
 # Unpacking sequence
-
 ```
 first,*remain = [2,3, 4,5]
 s = "Jessica 31 647.28"
@@ -32,21 +28,17 @@ name, age, money = s.split()
 ```
 
 # Conditional Assignment
-
 ```
 b=8
 a = 3 if b>5 else 9
 ```
 
 # Deletion
-
 ```
 del a1
 ```
 
-
 # object id, type, and value
-
 ```
 a = 4
 id(a)
@@ -55,7 +47,6 @@ dir(a)
 ```
 
 # Mutable and immutable variables
-
 ```
 # Mutable: When you alter the item, the id is still the same. Dictionary, List
 # Immutable: String, Integer, Tuple
@@ -69,20 +60,13 @@ a = 5
 id(a)
 ``` 
 
-
-
 #Variables: Numbers
-
-
 ```
 a = 4 # Integer
 b = 5.6 # Float
 ```
 
-
 # Variables: Boolean
-
-
 ```
 e = True
 f = False
@@ -90,8 +74,6 @@ f = False
 
 
 # Variables: Strings
-
-
 ```
 c = "hello" # String
 d = "4" # rebound to String
@@ -124,14 +106,12 @@ for c in "booyah":
 
 
 # Escape characters
-
 ```
 print('Text\tText')
 print('Text\nText')
 print('Text\'Text')
 print('Text\\Text')
 ```
-
 
 # String: Formating
 ```
@@ -146,7 +126,6 @@ s.format(38,4)
 ```
 
 # Padding and aligning strings
-
 ```
 '{:>10}'.format('test') # Align right
 '{:10}'.format('test') # Align left
@@ -154,25 +133,19 @@ s.format(38,4)
 '{:x<10}'.format('test')
 ```
 
-
 # Truncating
-
 ```
 '{:.5}'.format('xylophone')
 '{:10.5}'.format('xylophone')
 ```
 
-
 # Padding numbers
-
 ```
 '{:04d}'.format(42)  # Integers
 '{:06.2f}'.format(3.141592653589793) # Floats
 ```
 
-
 # String: Operations
-
 ```
 s = ' <This is some text> '
 s1 = ' <This is another text> '
@@ -196,9 +169,7 @@ s.startswith('T')
 s.endswith(' ')
 ```
 
-
 # Logical Operations:
-
 ```
 a=2
 b=3
@@ -206,7 +177,6 @@ print([a<b , a<=b ,  a>=b ,  a>b,   a==b ,  a!=b])
 ```
 
 # Combined conditions
-
 ```
 a= True
 b= False
@@ -214,15 +184,12 @@ print([ not a  ,  a and b ,   a or b])
 ```
 
 # Combined conditions
-
 ```
 x = 20
 12 < x <= 34
 ```
 
-
 # Mathematical Operations:
-
 ```
 a=2
 b=5
@@ -231,7 +198,6 @@ print(m)
 ```
 
 # Division types
-
 ```
 m =[a/b,a//b,a%b]
 print(m)
@@ -250,7 +216,6 @@ round(x,4)
 ```
 
 # Advanced math functions
-
 ```
 import math
 print(math.e)
@@ -262,14 +227,12 @@ print([math.ceil(x) ,math.floor(x), math.trunc(x) ])
 ```
 
 # Random library
-
 ```
 import random
 random.seed(2)
 x = [1,9,2,4,7,5,6]
 [random.random() , random.randint(3,12) , random.randrange(3,10,2) , random.uniform(2,40) , random.choice(x)]
 ```
-
 
 # Sequences (Containers):
 ## - Lists
@@ -279,8 +242,6 @@ x = [1,9,2,4,7,5,6]
 
 
 # Sequences (Containers): Lists
-
-
 ```
 a = [99, "bottles of beer", ["on", "the", "wall"]]
 a*3, a[0], a[-1], a[1:], len(a)
@@ -303,7 +264,6 @@ a.remove(2)
 ```
 
 # Sequences (Containers): Dictionaries ( Hash tables, associative arrays)
-
 ```
 d = {1: 'one', 2: 'two'}
 d = dict(a=2, b=4)
@@ -321,34 +281,29 @@ age['george']
 ```
 
 # Delete
-
 ```
 del age['charles']
 ```
 
 # Insert
-
 ```
 age.setdefault('max', 11)
 age['Alice'] = 14
 ```
 
 # Overwrite
-
 ```
 age['matt'] = 15
 ```
 
 # Keys, values, items:
-
 ```
 age.keys()
 age.values()
 age.items()
 ```
 
- # Sequences (Containers):  Tuples
-
+# Sequences (Containers):  Tuples
 ```
 a =(9,'x',[3,7,'new'])
 key = ('lastname', 'firstname')
@@ -360,11 +315,7 @@ singleton = (1,)	 # trailing comma!!!
 empty = ()		 # parentheses!
 ```
 
-
-
-
 # Sequences (Containers):  Sets
-
 ```
 s = {1,'toto',42}
 set([1,5,7,8,3])
@@ -373,9 +324,7 @@ a.add('m')
 a.remove('H')
 ```
 
-
 # Generic operations for containers
-
 ```
 'h' in 'hello'
 3 not in [3, 4 ,6, 9]
@@ -390,7 +339,6 @@ sorted([3, 4 ,6, 9])
 #Flow Control
 
 #If statement
-
 ```
 if condition1:
     # block executed if condition1 is true
@@ -399,7 +347,6 @@ elif condition2:
 else:
     # block executed if all conditions are false
 ```
-
 
 ```
 grade = 75
@@ -414,7 +361,6 @@ else:
 ```
 
 #Loop Over Sequence
-
 ```
 for var in iterable:
     # block executed with var being successively
@@ -424,11 +370,9 @@ else:
 ```
 
 #Loop with multiple variables
-
 ```
 for index,value in enumerate( )
 ```
-
 
 ```
 for number in [1, 2, 3, 4, 5, 6]:
@@ -478,9 +422,7 @@ for key, value in my_dict.items():
 
 ```
 
-
 #Loop while
-
 ```
 while condition:
     # block executed while condition is true
@@ -493,23 +435,17 @@ number = 1
 while number < 200:
     print(number)
     number = number * 2
-
 ```
 
 #Loop Break
-
 ```
 break # Immediate exit of the loop, without going through else block.
 ```
 
 # Loop skip
-
 ```
 continue # Immediate skip to the next iteration.
 ```
-
-
-
 
 # Classes and Instances
 
@@ -554,7 +490,6 @@ c.talk()  # invoke method
 ```
 
 # Modules & Packages
-
 ```
 import package
 import module
@@ -570,8 +505,6 @@ os.makedirs('aa/bb/cc/dd')
 ```
 
 # Files
-
-
 ```
 fid = open("myfile.txt", 'w+')
 fid.write('hello\n'*20)
@@ -594,18 +527,15 @@ with open('myfile.txt') as fin:
 print("The file contains {} lines.".format(count))
 ```
 
-
 ```
 name.read() #- file's entire contents as a string
 name.readline() #- next line from file as a string
 name.readlines() #- file's contents as a list of lines
 ```
 
-
 # Functions and Procedures
 
 # Function Definition
-
 ```
 def fname(x,y=4,*args,**kwargs):
     # function block or, if no code, pass
@@ -619,11 +549,9 @@ def fname(x,y=4,*args,**kwargs):
 ```
 
 # Function Call
-
 ```
 res = fname(expr,param=expr,*tuple,**dict)
 ```
-
 
 ```
 def add_2(num):
@@ -638,20 +566,14 @@ five = add_n(2)
 ten = add_n(15, -5)
 ```
 
-
-
 # List Comprehensions
-
-
 ```
 [expr for var in iter if cond]
 S = [x**2 for x in range(10)]
 M = [x for x in S if x % 2 == 0]
 ```
 
-
 # Generators
-
 ```
 variable = (yield expression)  #transmission of values to the generator.
 ```
@@ -667,18 +589,12 @@ x = iter([1, 2, 3])
 x.__next__()
 ```
 
-
 ```
-
 t = enumerate('text')
 t.__next__()
 ```
 
-
-
 # Lambda, filter, reduce and map
-
-
 ```
 lambda x,y: expression
 ```
@@ -700,8 +616,6 @@ F = list(map(fahrenheit, temp))
 C = list(map(celsius, F))
 ```
 
-
-
 ```
 temp = (36.5, 37, 37.5,39)
 F = list(map( lambda x: ((float(9)/5)*x + 32) , temp))
@@ -712,7 +626,6 @@ C = list(map( lambda x: (float(5)/9)*(x-32), F))
 fibonacci = [0,1,1,2,3,5,8,13,21,34,55]
 odd_numbers = list(filter(lambda x: x % 2, fibonacci))
 ```
-
 
 ```
 import functools
