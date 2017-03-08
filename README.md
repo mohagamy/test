@@ -1,66 +1,71 @@
-- [Interactive shell](#interactive-shell)
-- [Assignment](#assignment)
-- [Multiple assignment](#multiple-assignment)
-- [Unpacking sequence](#unpacking-sequence)
-- [Conditional Assignment](#conditional-assignment)
-- [Deletion](#deletion)
-- [object id, type, and value](#object-id--type--and-value)
-- [Mutable and immutable variables](#mutable-and-immutable-variables)
-- [Variables: Boolean](#variables--boolean)
-- [Variables: Strings](#variables--strings)
-- [Escape characters](#escape-characters)
-- [String: Formating](#string--formating)
-- [Padding and aligning strings](#padding-and-aligning-strings)
-- [Truncating](#truncating)
-- [Padding numbers](#padding-numbers)
-- [String: Operations](#string--operations)
-- [Logical Operations:](#logical-operations-)
-- [Combined conditions](#combined-conditions)
-- [Combined conditions](#combined-conditions-1)
-- [Mathematical Operations:](#mathematical-operations-)
-- [Division types](#division-types)
-- [Basic math functions](#basic-math-functions)
-- [Advanced math functions](#advanced-math-functions)
-- [Random library](#random-library)
+- [Basics](#basics)
+  * [Interactive shell](#interactive-shell)
+  * [Value assignment](#value-assignment)
+  * [Multiple assignment](#multiple-assignment)
+  * [Unpacking sequence](#unpacking-sequence)
+  * [Conditional Assignment](#conditional-assignment)
+  * [Deletion](#deletion)
+  * [object id, type, and value](#object-id--type--and-value)
+  * [Mutable and immutable variables](#mutable-and-immutable-variables)
+  * [Boolean](#boolean)
+  * [Strings](#strings)
+    + [String operations](#string-operations)
+    + [Escape characters](#escape-characters)
+    + [String formating](#string-formating)
+    + [Padding and aligning](#padding-and-aligning)
+    + [Truncating](#truncating)
+    + [Padding numbers](#padding-numbers)
+    + [String operations](#string-operations-1)
+- [Logical Operations](#logical-operations)
+  * [Basic conditions](#basic-conditions)
+  * [Combined conditions](#combined-conditions)
+  * [Simplified combined conditions](#simplified-combined-conditions)
+- [Mathematical Operations](#mathematical-operations)
+  * [Division](#division)
+  * [Basic math functions](#basic-math-functions)
+  * [Advanced math functions](#advanced-math-functions)
+  * [Random library](#random-library)
 - [Sequences (Containers):](#sequences--containers--)
-  * [- Lists](#--lists)
-  * [- Dictionaries](#--dictionaries)
-  * [- sets](#--sets)
-  * [- tuples](#--tuples)
-- [Sequences (Containers): Lists](#sequences--containers---lists)
-- [List operations](#list-operations)
-- [Sequences (Containers): Dictionaries ( Hash tables, associative arrays)](#sequences--containers---dictionaries---hash-tables--associative-arrays-)
-- [Lookup:](#lookup-)
-- [Delete](#delete)
-- [Insert](#insert)
-- [Overwrite](#overwrite)
-- [Keys, values, items:](#keys--values--items-)
-- [Sequences (Containers):  Tuples](#sequences--containers----tuples)
-- [Sequences (Containers):  Sets](#sequences--containers----sets)
+  * [Lists](#lists)
+    + [List operations](#list-operations)
+  * [Dictionaries ( Hash tables, associative arrays)](#dictionaries---hash-tables--associative-arrays-)
+    + [Read:](#read-)
+    + [Delete](#delete)
+    + [Insert](#insert)
+    + [Update](#update)
+    + [Keys, values, items:](#keys--values--items-)
+  * [Tuples](#tuples)
+  * [Sets](#sets)
 - [Generic operations for containers](#generic-operations-for-containers)
-- [Loop skip](#loop-skip)
+  * [If statement](#if-statement)
+  * [Loop Over Sequence](#loop-over-sequence)
+  * [Loop with multiple variables](#loop-with-multiple-variables)
+  * [Loop while](#loop-while)
+  * [Loop Break](#loop-break)
+  * [Loop skip](#loop-skip)
 - [Classes and Instances](#classes-and-instances)
 - [Modules & Packages](#modules---packages)
 - [Files](#files)
 - [Functions and Procedures](#functions-and-procedures)
-- [Function Definition](#function-definition)
-- [Function Call](#function-call)
+  * [Function Definition](#function-definition)
+  * [Function Call](#function-call)
 - [List Comprehensions](#list-comprehensions)
 - [Generators](#generators)
 - [Lambda, filter, reduce and map](#lambda--filter--reduce-and-map)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-# Interactive shell
-```python 
+# Basics
+
+## Interactive shell
+``` 
 3+2
 x = 12
 print('hello world')
 age = int(input("How old are you? "))   # explicit cast to int or float if needed.
 ```
 
-# Assignment
+## Value assignment
 ```
 a = [1, 2, 3]
 b = a
@@ -68,31 +73,31 @@ a.append(4)
 print(b) #[1, 2, 3, 4], b = a does not make a copy of a but makes b reference to the object a references
 ```
 
-# Multiple assignment
+## Multiple assignment
 ```
 a1,a2,a3 = 2,5,6
 a1 = a2 = a3 = 5
 ```
 
-# Unpacking sequence
+## Unpacking sequence
 ```
 first,*remain = [2,3, 4,5]
 s = "Jessica 31 647.28"
 name, age, money = s.split()
 ```
 
-# Conditional Assignment
+## Conditional Assignment
 ```
 b=8
 a = 3 if b>5 else 9
 ```
 
-# Deletion
+## Deletion
 ```
 del a1
 ```
 
-# object id, type, and value
+## object id, type, and value
 ```
 a = 4
 id(a)
@@ -100,10 +105,8 @@ type(a)
 dir(a)
 ```
 
-# Mutable and immutable variables
+## Mutable and immutable variables
 ```
-# Mutable: When you alter the item, the id is still the same. Dictionary, List
-# Immutable: String, Integer, Tuple
 b = []
 id(b)
 b.append(3)
@@ -114,20 +117,22 @@ a = 5
 id(a)
 ``` 
 
-#Variables: Numbers
+#Variables 
+
+##Numbers
 ```
 a = 4 # Integer
 b = 5.6 # Float
 ```
 
-# Variables: Boolean
+## Boolean
 ```
 e = True
 f = False
 ```
 
 
-# Variables: Strings
+## Strings
 ```
 c = "hello" # String
 d = "4" # rebound to String
@@ -137,70 +142,19 @@ multiple lines
 in it"""
 ```
 
+### String operations 
 ```
 dir("a string")
 help("a string".startswith)
-name = "Martin Douglas Stepp"
-length = len(name)
-big_name = str.upper(name)
-print(big_name, "has  ", length, "characters")
-```
-
-```
-"hello"+"world"		# concatenation
-"hello"*3		 # repetition
-"hello"[0]			# indexing
-"hello"[-1]			# (from end)
-"hello"[1:4]				# slicing
+"hello"+"world"			# concatenation
+"hello"*3				# repetition
+"hello"[0]				# indexing
+"hello"[-1]				# (from end)
+"hello"[1:4]			# slicing
 len("hello")		    # size
-"e" in "hello"				# search
-for c in "booyah":
+"e" in "hello"			# search
+for c in "booyah":		# loop 
     print(c)
-```
-
-
-# Escape characters
-```
-print('Text\tText')
-print('Text\nText')
-print('Text\'Text')
-print('Text\\Text')
-```
-
-# String: Formating
-```
-"I am {} years old and I lived in {} countries".format(38,4)
-s = "I am {} years old and I lived in {} countries"
-s.format(38,4)
-"{1} {0} {0}".format(3,9)
-"{x} {y}".format(y=2,x=5)
-"{0!r} {0!s}".format("text\n") # !s or !r renders the output of str() or repr()
-"{0} in binary is {0:b} and in octal is {0:o} and in hexadecimal is {0:x}".format(100)
-"Fixed point: {0:0.4f} General format: {0:0.8g} Exponent notation: {0:.1e}".format(1.44573463463745)
-```
-
-# Padding and aligning strings
-```
-'{:>10}'.format('test') # Align right
-'{:10}'.format('test') # Align left
-'{:^10}'.format('test') # center align
-'{:x<10}'.format('test')
-```
-
-# Truncating
-```
-'{:.5}'.format('xylophone')
-'{:10.5}'.format('xylophone')
-```
-
-# Padding numbers
-```
-'{:04d}'.format(42)  # Integers
-'{:06.2f}'.format(3.141592653589793) # Floats
-```
-
-# String: Operations
-```
 s = ' <This is some text> '
 s1 = ' <This is another text> '
 n = 4
@@ -223,27 +177,74 @@ s.startswith('T')
 s.endswith(' ')
 ```
 
-# Logical Operations:
+
+### Escape characters
+```
+print('Text\tText')
+print('Text\nText')
+print('Text\'Text')
+print('Text\\Text')
+```
+
+### String formating
+```
+"I am {} years old and I lived in {} countries".format(38,4)
+s = "I am {} years old and I lived in {} countries"
+s.format(38,4)
+"{1} {0} {0}".format(3,9)
+"{x} {y}".format(y=2,x=5)
+"{0!r} {0!s}".format("text\n") # !s or !r renders the output of str() or repr()
+"{0} in binary is {0:b} and in octal is {0:o} and in hexadecimal is {0:x}".format(100)
+"Fixed point: {0:0.4f} General format: {0:0.8g} Exponent notation: {0:.1e}".format(1.44573463463745)
+```
+
+### Padding and aligning
+```
+'{:>10}'.format('test') # Align right
+'{:10}'.format('test') # Align left
+'{:^10}'.format('test') # center align
+'{:x<10}'.format('test')
+```
+
+### Truncating
+```
+'{:.5}'.format('xylophone')
+'{:10.5}'.format('xylophone')
+```
+
+### Padding numbers
+```
+'{:04d}'.format(42)  # Integers
+'{:06.2f}'.format(3.141592653589793) # Floats
+```
+
+### String operations
+```
+```
+
+# Logical Operations
+
+## Basic conditions
 ```
 a=2
 b=3
 print([a<b , a<=b ,  a>=b ,  a>b,   a==b ,  a!=b])
 ```
 
-# Combined conditions
+## Combined conditions
 ```
 a= True
 b= False
 print([ not a  ,  a and b ,   a or b])
 ```
 
-# Combined conditions
+## Simplified combined conditions
 ```
 x = 20
 12 < x <= 34
 ```
 
-# Mathematical Operations:
+# Mathematical Operations
 ```
 a=2
 b=5
@@ -251,7 +252,7 @@ m =[-a,a+b,a-b,a*b,a**b]
 print(m)
 ```
 
-# Division types
+## Division
 ```
 m =[a/b,a//b,a%b]
 print(m)
@@ -261,7 +262,7 @@ print(m)
 ```
 
 
-# Basic math functions
+## Basic math functions
 ```
 x = -3.6584726633
 abs(x)
@@ -269,7 +270,7 @@ pow(2,3)
 round(x,4)
 ```
 
-# Advanced math functions
+## Advanced math functions
 ```
 import math
 print(math.e)
@@ -280,7 +281,7 @@ print([math.ceil(x) ,math.floor(x), math.trunc(x) ])
 [math.sqrt(x), math.cos(x), math.sin(x), math.tan(x)]
 ```
 
-# Random library
+## Random library
 ```
 import random
 random.seed(2)
@@ -289,13 +290,9 @@ x = [1,9,2,4,7,5,6]
 ```
 
 # Sequences (Containers):
-## - Lists
-## - Dictionaries
-## - sets
-## - tuples
 
 
-# Sequences (Containers): Lists
+## Lists
 ```
 a = [99, "bottles of beer", ["on", "the", "wall"]]
 a*3, a[0], a[-1], a[1:], len(a)
@@ -304,7 +301,7 @@ a[1:2] = ["bottles", "of", "beer"]
 del a[-1]
 ```
 
-# List operations
+### List operations
 ```
 a =  [0,1,2,3,4]
 a.append([5,6])		# [0,1,2,3,4,5,6]
@@ -317,7 +314,7 @@ a.sort()			# [0,1,2,3,4]
 a.remove(2)
 ```
 
-# Sequences (Containers): Dictionaries ( Hash tables, associative arrays)
+## Dictionaries ( Hash tables, associative arrays)
 ```
 d = {1: 'one', 2: 'two'}
 d = dict(a=2, b=4)
@@ -327,37 +324,37 @@ age['fred'] = 12
 age['henry'] = 10
 ```
 
-# Lookup:
+### Read:
 ```
 age['george']
 'matt' in age
 'charles' not in age
 ```
 
-# Delete
+### Delete
 ```
 del age['charles']
 ```
 
-# Insert
+### Insert
 ```
 age.setdefault('max', 11)
 age['Alice'] = 14
 ```
 
-# Overwrite
+### Update
 ```
 age['matt'] = 15
 ```
 
-# Keys, values, items:
+### Keys, values, items:
 ```
 age.keys()
 age.values()
 age.items()
 ```
 
-# Sequences (Containers):  Tuples
+## Tuples
 ```
 a =(9,'x',[3,7,'new'])
 key = ('lastname', 'firstname')
@@ -369,7 +366,7 @@ singleton = (1,)	 # trailing comma!!!
 empty = ()		 # parentheses!
 ```
 
-# Sequences (Containers):  Sets
+## Sets
 ```
 s = {1,'toto',42}
 set([1,5,7,8,3])
@@ -392,7 +389,7 @@ sorted([3, 4 ,6, 9])
 
 #Flow Control
 
-#If statement
+## If statement
 ```
 if condition1:
     # block executed if condition1 is true
@@ -414,7 +411,7 @@ else:
     print('D')
 ```
 
-#Loop Over Sequence
+## Loop Over Sequence
 ```
 for var in iterable:
     # block executed with var being successively
@@ -423,7 +420,7 @@ else:
     # executed after, except if exit for loop by break
 ```
 
-#Loop with multiple variables
+## Loop with multiple variables
 ```
 for index,value in enumerate( )
 ```
@@ -476,7 +473,7 @@ for key, value in my_dict.items():
 
 ```
 
-#Loop while
+## Loop while
 ```
 while condition:
     # block executed while condition is true
@@ -491,12 +488,12 @@ while number < 200:
     number = number * 2
 ```
 
-#Loop Break
+## Loop Break
 ```
 break # Immediate exit of the loop, without going through else block.
 ```
 
-# Loop skip
+## Loop skip
 ```
 continue # Immediate skip to the next iteration.
 ```
@@ -589,7 +586,7 @@ name.readlines() #- file's contents as a list of lines
 
 # Functions and Procedures
 
-# Function Definition
+## Function Definition
 ```
 def fname(x,y=4,*args,**kwargs):
     # function block or, if no code, pass
@@ -602,7 +599,7 @@ def fname(x,y=4,*args,**kwargs):
     # ret_expression: tuple return multiple values
 ```
 
-# Function Call
+## Function Call
 ```
 res = fname(expr,param=expr,*tuple,**dict)
 ```
