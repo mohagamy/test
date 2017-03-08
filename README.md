@@ -54,11 +54,10 @@
 - [Lambda, filter, reduce and map](#lambda--filter--reduce-and-map)
 
 
-
 # Basics
 
 ## Interactive shell
-``` 
+```python 
 3+2
 x = 12
 print('hello world')
@@ -66,7 +65,7 @@ age = int(input("How old are you? "))   # explicit cast to int or float if neede
 ```
 
 ## Value assignment
-```
+```python 
 a = [1, 2, 3]
 b = a
 a.append(4)
@@ -74,31 +73,31 @@ print(b) #[1, 2, 3, 4], b = a does not make a copy of a but makes b reference to
 ```
 
 ## Multiple assignment
-```
+```python 
 a1,a2,a3 = 2,5,6
 a1 = a2 = a3 = 5
 ```
 
 ## Unpacking sequence
-```
+```python 
 first,*remain = [2,3, 4,5]
 s = "Jessica 31 647.28"
 name, age, money = s.split()
 ```
 
 ## Conditional Assignment
-```
+```python 
 b=8
 a = 3 if b>5 else 9
 ```
 
 ## Deletion
-```
+```python
 del a1
 ```
 
 ## object id, type, and value
-```
+```python
 a = 4
 id(a)
 type(a)
@@ -106,7 +105,7 @@ dir(a)
 ```
 
 ## Mutable and immutable variables
-```
+```python
 b = []
 id(b)
 b.append(3)
@@ -120,20 +119,20 @@ id(a)
 #Variables 
 
 ##Numbers
-```
+```python
 a = 4 # Integer
 b = 5.6 # Float
 ```
 
 ## Boolean
-```
+```python
 e = True
 f = False
 ```
 
 
 ## Strings
-```
+```python
 c = "hello" # String
 d = "4" # rebound to String
 with_quote = "I ain't gonna"
@@ -143,7 +142,7 @@ in it"""
 ```
 
 ### String operations 
-```
+```python
 dir("a string")
 help("a string".startswith)
 "hello"+"world"			# concatenation
@@ -179,7 +178,7 @@ s.endswith(' ')
 
 
 ### Escape characters
-```
+```python
 print('Text\tText')
 print('Text\nText')
 print('Text\'Text')
@@ -187,7 +186,7 @@ print('Text\\Text')
 ```
 
 ### String formating
-```
+```python
 "I am {} years old and I lived in {} countries".format(38,4)
 s = "I am {} years old and I lived in {} countries"
 s.format(38,4)
@@ -199,7 +198,7 @@ s.format(38,4)
 ```
 
 ### Padding and aligning
-```
+```python
 '{:>10}'.format('test') # Align right
 '{:10}'.format('test') # Align left
 '{:^10}'.format('test') # center align
@@ -207,45 +206,45 @@ s.format(38,4)
 ```
 
 ### Truncating
-```
+```python
 '{:.5}'.format('xylophone')
 '{:10.5}'.format('xylophone')
 ```
 
 ### Padding numbers
-```
+```python
 '{:04d}'.format(42)  # Integers
 '{:06.2f}'.format(3.141592653589793) # Floats
 ```
 
 ### String operations
-```
+```python
 ```
 
 # Logical Operations
 
 ## Basic conditions
-```
+```python
 a=2
 b=3
 print([a<b , a<=b ,  a>=b ,  a>b,   a==b ,  a!=b])
 ```
 
 ## Combined conditions
-```
+```python
 a= True
 b= False
 print([ not a  ,  a and b ,   a or b])
 ```
 
 ## Simplified combined conditions
-```
+```python
 x = 20
 12 < x <= 34
 ```
 
 # Mathematical Operations
-```
+```python
 a=2
 b=5
 m =[-a,a+b,a-b,a*b,a**b]
@@ -253,7 +252,7 @@ print(m)
 ```
 
 ## Division
-```
+```python
 m =[a/b,a//b,a%b]
 print(m)
 # a/b floating point division
@@ -263,7 +262,7 @@ print(m)
 
 
 ## Basic math functions
-```
+```python
 x = -3.6584726633
 abs(x)
 pow(2,3)
@@ -271,7 +270,7 @@ round(x,4)
 ```
 
 ## Advanced math functions
-```
+```python
 import math
 print(math.e)
 print(math.pi)
@@ -282,7 +281,7 @@ print([math.ceil(x) ,math.floor(x), math.trunc(x) ])
 ```
 
 ## Random library
-```
+```python
 import random
 random.seed(2)
 x = [1,9,2,4,7,5,6]
@@ -293,7 +292,7 @@ x = [1,9,2,4,7,5,6]
 
 
 ## Lists
-```
+```python
 a = [99, "bottles of beer", ["on", "the", "wall"]]
 a*3, a[0], a[-1], a[1:], len(a)
 a[0] = 98
@@ -302,7 +301,7 @@ del a[-1]
 ```
 
 ### List operations
-```
+```python
 a =  [0,1,2,3,4]
 a.append([5,6])		# [0,1,2,3,4,5,6]
 a.extend([5,6])
@@ -315,7 +314,7 @@ a.remove(2)
 ```
 
 ## Dictionaries ( Hash tables, associative arrays)
-```
+```python
 d = {1: 'one', 2: 'two'}
 d = dict(a=2, b=4)
 age = {}
@@ -325,37 +324,37 @@ age['henry'] = 10
 ```
 
 ### Read:
-```
+```python
 age['george']
 'matt' in age
 'charles' not in age
 ```
 
 ### Delete
-```
+```python
 del age['charles']
 ```
 
 ### Insert
-```
+```python
 age.setdefault('max', 11)
 age['Alice'] = 14
 ```
 
 ### Update
-```
+```python
 age['matt'] = 15
 ```
 
 ### Keys, values, items:
-```
+```python
 age.keys()
 age.values()
 age.items()
 ```
 
 ## Tuples
-```
+```python
 a =(9,'x',[3,7,'new'])
 key = ('lastname', 'firstname')
 x,y,z = 2,5,7
@@ -367,7 +366,7 @@ empty = ()		 # parentheses!
 ```
 
 ## Sets
-```
+```python
 s = {1,'toto',42}
 set([1,5,7,8,3])
 a = set('Hello')
@@ -376,7 +375,7 @@ a.remove('H')
 ```
 
 # Generic operations for containers
-```
+```python
 'h' in 'hello'
 3 not in [3, 4 ,6, 9]
 len((2,3,5))
@@ -390,7 +389,7 @@ sorted([3, 4 ,6, 9])
 #Flow Control
 
 ## If statement
-```
+```python
 if condition1:
     # block executed if condition1 is true
 elif condition2:
@@ -399,7 +398,7 @@ else:
     # block executed if all conditions are false
 ```
 
-```
+```python
 grade = 75
 if grade > 90:
     print('A')
@@ -412,7 +411,7 @@ else:
 ```
 
 ## Loop Over Sequence
-```
+```python
 for var in iterable:
     # block executed with var being successively
     # each of the values in iterable
@@ -421,11 +420,11 @@ else:
 ```
 
 ## Loop with multiple variables
-```
+```python
 for index,value in enumerate( )
 ```
 
-```
+```python
 for number in [1, 2, 3, 4, 5, 6]:
     print(number)
 
@@ -474,14 +473,14 @@ for key, value in my_dict.items():
 ```
 
 ## Loop while
-```
+```python
 while condition:
     # block executed while condition is true
 else:
     # executed after, except if exit while loop by break
 ```
 
-```
+```python
 number = 1
 while number < 200:
     print(number)
@@ -489,18 +488,18 @@ while number < 200:
 ```
 
 ## Loop Break
-```
+```python
 break # Immediate exit of the loop, without going through else block.
 ```
 
 ## Loop skip
-```
+```python
 continue # Immediate skip to the next iteration.
 ```
 
 # Classes and Instances
 
-```
+```python
 class Animal(object):
     def __init__(self, name):
         self.name = name
@@ -509,13 +508,13 @@ class Animal(object):
         print("Generic Animal Sound")
 ```
 
-```
+```python
 animal = Animal("thing")
 animal.name
 animal.talk()
 ```
 
-```
+```python
 class Cat(Animal):
     def talk(self):
         print('{} says, "Meow!"'.format(self.name))
@@ -525,7 +524,7 @@ cat1.name
 cat1.talk()  # invoke method
 ```
 
-```
+```python
 class Cheetah(Cat):
     """classes can have docstrings"""
 
@@ -533,7 +532,7 @@ class Cheetah(Cat):
         print("Growl")
 ```
 
-```
+```python
 Cheetah.__doc__
 c = Cheetah("Tiger")
 c.name
@@ -541,14 +540,14 @@ c.talk()  # invoke method
 ```
 
 # Modules & Packages
-```
+```python
 import package
 import module
 from math import sin
 import longname as ln
 ```
 
-```
+```python
 import os
 help(os)
 help(os.makedirs)
@@ -556,21 +555,21 @@ os.makedirs('aa/bb/cc/dd')
 ```
 
 # Files
-```
+```python
 fid = open("myfile.txt", 'w+')
 fid.write('hello\n'*20)
 print(file_text)
 fid.close()
 ```
 
-```
+```python
 count = 0
 for line in open("myfile.txt").readlines():
     count = count + 1
 print("The file contains {} lines.".format(count))
 ```
 
-```
+```python
 count = 0
 with open('myfile.txt') as fin:
     for line in fin:
@@ -578,7 +577,7 @@ with open('myfile.txt') as fin:
 print("The file contains {} lines.".format(count))
 ```
 
-```
+```python
 name.read() #- file's entire contents as a string
 name.readline() #- next line from file as a string
 name.readlines() #- file's contents as a list of lines
@@ -587,7 +586,7 @@ name.readlines() #- file's contents as a list of lines
 # Functions and Procedures
 
 ## Function Definition
-```
+```python
 def fname(x,y=4,*args,**kwargs):
     # function block or, if no code, pass
     return ret_expression
@@ -600,17 +599,17 @@ def fname(x,y=4,*args,**kwargs):
 ```
 
 ## Function Call
-```
+```python
 res = fname(expr,param=expr,*tuple,**dict)
 ```
 
-```
+```python
 def add_2(num):
     return num + 2
 five = add_2(3)
 ```
 
-```
+```python
 def add_n(num, n=3):
     return num + n
 five = add_n(2)
@@ -618,44 +617,44 @@ ten = add_n(15, -5)
 ```
 
 # List Comprehensions
-```
+```python
 [expr for var in iter if cond]
 S = [x**2 for x in range(10)]
 M = [x for x in S if x % 2 == 0]
 ```
 
 # Generators
-```
+```python
 variable = (yield expression)  #transmission of values to the generator.
 ```
 
-```
+```python
 g = range(2,20,3)
 r = ( 2*x+5 for x in g if x%2==0  )
 r.__next__()
 ```
 
-```
+```python
 x = iter([1, 2, 3])
 x.__next__()
 ```
 
-```
+```python
 t = enumerate('text')
 t.__next__()
 ```
 
 # Lambda, filter, reduce and map
-```
+```python
 lambda x,y: expression
 ```
 
-```
+```python
 sum = lambda x, y : x + y
 sum(3,4)
 ```
 
-```
+```python
 def fahrenheit(T):
     return ((float(9)/5)*T + 32)
 def celsius(T):
@@ -667,23 +666,23 @@ F = list(map(fahrenheit, temp))
 C = list(map(celsius, F))
 ```
 
-```
+```python
 temp = (36.5, 37, 37.5,39)
 F = list(map( lambda x: ((float(9)/5)*x + 32) , temp))
 C = list(map( lambda x: (float(5)/9)*(x-32), F))
 ```
 
-```
+```python
 fibonacci = [0,1,1,2,3,5,8,13,21,34,55]
 odd_numbers = list(filter(lambda x: x % 2, fibonacci))
 ```
 
-```
+```python
 import functools
 functools.reduce(lambda x,y: x+y, [47,11,42,13])
 ```
 
-```
+```python
 from functools import reduce
 f = lambda a,b: a if (a > b) else b
 reduce(f, [47,11,42,102,13])
