@@ -258,7 +258,7 @@ a.sort()			# [0,1,2,3,4]
 a.remove(2)
 ```
 
-## Dictionaries ( Hash tables, associative arrays)
+## Dictionaries (Hash tables, associative arrays)
 ```python
 d = {1: 'one', 2: 'two'}
 d = dict(a=2, b=4)
