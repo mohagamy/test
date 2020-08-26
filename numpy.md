@@ -8,5 +8,5 @@ a.ndim # 2
 a.shape # (2, 3)
 a.size # 6
 a.dtype #  dtype('float64')
-a.itemsize # 8
+a.itemsize # 8  = size (in bytes) of each element
 ```
