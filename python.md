@@ -216,12 +216,18 @@ round(x,4)
 ## Advanced math functions
 ```python
 import math
-print(math.e)
-print(math.pi)
+math.e
+math.pi
 x = 3.57855
-print([math.ceil(x), math.floor(x), math.trunc(x) ])
-[math.exp(x), math.log(x)]
-[math.sqrt(x), math.cos(x), math.sin(x), math.tan(x)]
+math.ceil(x)
+math.floor(x)
+math.trunc(x)
+math.exp(x)
+math.log(x)
+math.sqrt(x)
+math.cos(x)
+math.sin(x)
+math.tan(x)
 ```
 
 ## Random library
