@@ -76,3 +76,14 @@ np.transpose(*axes)
 np.var([axis, dtype, out, ddof, keepdims])
 np.view([dtype][, type])
 ```
+
+```python
+np.zeros((3,4))
+np.ones((2,3,4),dtype=np.int16)
+d = np.arange(10,25,5)       
+np.linspace(0,2,9)  
+e = np.full((2,2),7)   
+f = np.eye(2)
+np.random.random((2,2))  
+np.empty((3,2))   
+```
