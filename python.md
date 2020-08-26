@@ -2,37 +2,38 @@
 # Basics
 
 ## Interactive shell
+
 ```python 
-3+2
-x = 12
-print('hello world')
 age = int(input("How old are you? "))   # explicit cast to int or float if needed.
 ```
 
 ## Value assignment
+
 ```python 
 a = [1, 2, 3]
 b = a
 a.append(4)
-print(b) #[1, 2, 3, 4], b = a does not make a copy of a but makes b reference to the object a references
+print(b) 
+#[1, 2, 3, 4], b = a does not make a copy of a but makes b reference to the object a references
 ```
 
 ## Multiple assignment
+
 ```python 
-a1,a2,a3 = 2,5,6
+a1, a2, a3 = 2, 5, 6
 a1 = a2 = a3 = 5
 ```
 
 ## Unpacking sequence
 ```python 
-first,*remain = [2,3, 4,5]
+first,*remain = [2, 3, 4, 5]
 s = "Jessica 31 647.28"
 name, age, money = s.split()
 ```
 
 ## Conditional Assignment
 ```python 
-b=8
+b = 8
 a = 3 if b>5 else 9
 ```
 
@@ -162,9 +163,6 @@ s.format(38,4)
 '{:06.2f}'.format(3.141592653589793) # Floats
 ```
 
-### String operations
-```python
-```
 
 # Logical Operations
 
@@ -176,6 +174,7 @@ print([a<b , a<=b ,  a>=b ,  a>b,   a==b ,  a!=b])
 ```
 
 ## Combined conditions
+
 ```python
 a= True
 b= False
@@ -220,8 +219,8 @@ import math
 print(math.e)
 print(math.pi)
 x = 3.57855
-print([math.ceil(x) ,math.floor(x), math.trunc(x) ])
-[ math.exp(x), math.log(x)]
+print([math.ceil(x), math.floor(x), math.trunc(x) ])
+[math.exp(x), math.log(x)]
 [math.sqrt(x), math.cos(x), math.sin(x), math.tan(x)]
 ```
 
@@ -230,7 +229,11 @@ print([math.ceil(x) ,math.floor(x), math.trunc(x) ])
 import random
 random.seed(2)
 x = [1,9,2,4,7,5,6]
-[random.random() , random.randint(3,12) , random.randrange(3,10,2) , random.uniform(2,40) , random.choice(x)]
+random.random()
+random.randint(3,12)
+random.randrange(3,10,2)
+random.uniform(2,40)
+random.choice(x)
 ```
 
 # Sequences (Containers):
@@ -320,6 +323,7 @@ a.remove('H')
 ```
 
 # Generic operations for containers
+
 ```python
 'h' in 'hello'
 3 not in [3, 4 ,6, 9]
@@ -331,7 +335,7 @@ reversed([3, 4 ,6, 9])
 sorted([3, 4 ,6, 9])
 ```
 
-#Flow Control
+# Flow Control
 
 ## If statement
 ```python
