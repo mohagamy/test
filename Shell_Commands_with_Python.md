@@ -100,6 +100,7 @@ for line in ssh.stdout:
     print(line.strip())
 ```
 Here you can see how to write input to the process. In this case you need to set the bufsize=0 in order to have unbuffered output. After you are finished writing to the stdin, you need to close the connection.
-Conclusion
+
+## Conclusion
 You have seen now how to run external commands in Python. The most effective way is to use the subprocess module with all the functionality it offers. Most notably, you should consider using subprocess.run. For a short and quick script you might just want to use the os.system() or os.popen() functions. If you have any questions, feel free to leave them in the comments below. There are also other useful libraries that support shell commands in Python, like plumbum, sh, psutils and pexpect.
 
