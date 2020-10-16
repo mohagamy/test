@@ -23,9 +23,11 @@ print(output)
 > you are not able to pipe commands
 
 ```python
-import subprocess, PIPE
-process = subprocess.Popen(['echo', 'More output'], stdout=PIPE, stderr=PIPE) 
+from subprocess import Popen PIPE
+process = Popen(['echo', 'More output'], stdout=PIPE, stderr=PIPE) 
 stdout, stderr = process.communicate()
+print(stdout)
+print(stderr)
 ```
 
 or
