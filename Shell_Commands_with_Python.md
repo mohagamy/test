@@ -15,6 +15,7 @@ output = stream.read()
 
 ## `subprocess` Module
 
+- `subprocess.Popen`
 ```python
 import subprocess, PIPE
 process = subprocess.Popen(['echo', 'More output'], stdout=PIPE, stderr=PIPE) 
@@ -52,7 +53,7 @@ You can use the `.poll()` function to check the return code of the process.
 
 Also note, that you won’t need quotations for arguments with spaces in between like '\"More output\"'. 
 
-- If you are unsure how to tokenize the arguments from the command, you can use the `shlex.split()` function:
+If you are unsure how to tokenize the arguments from the command, you can use the `shlex.split()` function:
 
 ```python
 import shlex
@@ -60,7 +61,11 @@ shlex.split("/bin/prog -i data.txt -o \"more data.txt\"")
 ['/bin/prog', '-i', 'data.txt', '-o', 'more data.txt']
 ```
 
-You have also the `subprocess.call()` function to your disposal which works like the Popen class, but it waits until the command completes and gives you the return code as in `return_code = subprocess.call(['echo', 'Even more output'])`. The recommended way however is to use `subprocess.run()` which works since Python 3.5. It has been added as a simplification of `subprocess.Popen`. The function will return a `subprocess.CompletedProcess` object:
+- `subprocess.call()`
+You have also the `subprocess.call()` function to your disposal which works like the Popen class, but it waits until the command completes and gives you the return code as in `return_code = subprocess.call(['echo', 'Even more output'])`. 
+
+- `subprocess.run()`
+The recommended way however is to use `subprocess.run()` which works since Python 3.5. It has been added as a simplification of `subprocess.Popen`. The function will return a `subprocess.CompletedProcess` object:
 
 ```python
 process = subprocess.run(['echo', 'Even more output'], 
@@ -72,6 +77,7 @@ CompletedProcess(args=['echo', 'Even more output'], returncode=0, stdout='Even m
 You can now find the resulting output in this variable:
 process.stdout
 'Even more output\n'
+
 Similar to subprocess.call() and the previous .communicate() function, it will wait untill the process is completed. Finally, here is a more advanced example on how to access a server with ssh and the subprocess module:
 
 ```python
