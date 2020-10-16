@@ -1,6 +1,6 @@
 # How to Execute Shell Commands with Python
 
-## Using the os Module
+## `os` Module
 
 ```python
 import os
@@ -13,7 +13,7 @@ stream = os.popen('echo Returned output')
 output = stream.read()
 ```
 
-## Using the subprocess Module
+## `subprocess` Module
 
 ```python
 import subprocess, PIPE
