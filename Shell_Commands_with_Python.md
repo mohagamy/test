@@ -38,7 +38,7 @@ with open('test.txt', 'w') as f:
 ```
 the output is of type bytes, so 'stdout.decode('utf-8')' or add 'universal_newlines=True' when calling subprocess.Popen.
 
-check the status in realtime 
+> check the status in realtime 
 
 ```python
 process = subprocess.Popen(['ping', '-c 4', 'python.org'], 
