@@ -11,7 +11,11 @@ os.system('ls -l') # you can’t get the resulting output as a variable.
 import os
 stream = os.popen('echo Returned output')
 output = stream.read()
-Using the subprocess Module
+```
+
+## Using the subprocess Module
+
+```python
 import subprocess
 process = subprocess.Popen(['echo', 'More output'], stdout=subprocess.PIPE, stderr=subprocess.PIPE) # you are not able to pipe commands
 stdout, stderr = process.communicate()
@@ -22,8 +26,11 @@ or
 ```python
 with open('test.txt', 'w') as f:
     process = subprocess.Popen(['ls', '-l'], stdout=f)
+```
 the output is of type bytes, so stdout.decode('utf-8') or add universal_newlines=True when calling subprocess.Popen.
 check the status in realtime 
+
+```python
 process = subprocess.Popen(['ping', '-c 4', 'python.org'], 
                            stdout=subprocess.PIPE,
                            universal_newlines=True)
@@ -48,7 +55,10 @@ Also note, that you won’t need quotations for arguments with spaces in between
 import shlex
 shlex.split("/bin/prog -i data.txt -o \"more data.txt\"")
 ['/bin/prog', '-i', 'data.txt', '-o', 'more data.txt']
+```
 You have also the subprocess.call() function to your disposal which works like the Popen class, but it waits until the command completes and gives you the return code as in return_code = subprocess.call(['echo', 'Even more output']). The recommended way however is to use subprocess.run() which works since Python 3.5. It has been added as a simplification of subprocess.Popen. The function will return a subprocess.CompletedProcess object:
+
+```python
 process = subprocess.run(['echo', 'Even more output'], 
                          stdout=subprocess.PIPE, 
                          universal_newlines=True)
