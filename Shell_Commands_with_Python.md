@@ -1,10 +1,11 @@
 # How to Execute Shell Commands with Python
 
 ## `os` Module
+you can’t get the resulting output as a variable.
 
 ```python
 import os
-os.system('ls -l') # you can’t get the resulting output as a variable.
+os.system('ls -l') 
 ```
 
 ```python
@@ -16,10 +17,11 @@ output = stream.read()
 ## `subprocess` Module
 
 - `subprocess.Popen`
+you are not able to pipe commands
+
 ```python
 import subprocess, PIPE
 process = subprocess.Popen(['echo', 'More output'], stdout=PIPE, stderr=PIPE) 
-# you are not able to pipe commands
 stdout, stderr = process.communicate()
 ```
 
@@ -29,7 +31,8 @@ or
 with open('test.txt', 'w') as f:
     process = subprocess.Popen(['ls', '-l'], stdout=f)
 ```
-the output is of type bytes, so stdout.decode('utf-8') or add universal_newlines=True when calling subprocess.Popen.
+the output is of type bytes, so 'stdout.decode('utf-8')' or add 'universal_newlines=True' when calling subprocess.Popen.
+
 check the status in realtime 
 
 ```python
