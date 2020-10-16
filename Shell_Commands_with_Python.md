@@ -1,7 +1,8 @@
 # How to Execute Shell Commands with Python
 
 ## `os` Module
-you can’t get the resulting output as a variable.
+
+> you can’t get the resulting output as a variable.
 
 ```python
 import os
@@ -17,7 +18,8 @@ output = stream.read()
 ## `subprocess` Module
 
 - `subprocess.Popen`
-you are not able to pipe commands
+
+> you are not able to pipe commands
 
 ```python
 import subprocess, PIPE
