@@ -1,4 +1,29 @@
 
+Pillow
+Matplotlib 
+Numpy
+OpenCV 
+Requests
+Keras
+TensorFlow
+Theano
+NLTK (Natural Language Toolkit)
+Fire
+Arrow
+FlashText
+Scipy 
+SQLAlchemy
+wxPython
+PyTorch
+BeautifulSoup 
+Bokeh
+Pandas 
+Scikit Learn
+subprocess
+NetworkX 
+osBrain
+
+
 ## remove python2
 
 ```shell
@@ -20,3 +45,4 @@ sudo ln -s /usr/bin/pip3 /usr/bin/pip
 # Confirm the new version of Python: 3
 python --version
 ```
+
