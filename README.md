@@ -1,27 +1,27 @@
 
-Pillow
-Matplotlib 
-Numpy
-OpenCV 
-Requests
-Keras
-TensorFlow
-Theano
-NLTK (Natural Language Toolkit)
-Fire
-Arrow
-FlashText
-Scipy 
-SQLAlchemy
-wxPython
-PyTorch
-BeautifulSoup 
-Bokeh
-Pandas 
-Scikit Learn
-subprocess
-NetworkX 
-osBrain
+- Pillow
+- Matplotlib 
+- Numpy
+- OpenCV 
+- Requests
+- Keras
+- TensorFlow
+- Theano
+- NLTK
+- Fire
+- Arrow
+- FlashText
+- Scipy 
+- SQLAlchemy
+- wxPython
+- PyTorch
+- BeautifulSoup 
+- Bokeh
+- Pandas 
+- Scikit Learn
+- subprocess
+- NetworkX 
+- osBrain
 
 
 ## remove python2
