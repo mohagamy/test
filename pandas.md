@@ -55,6 +55,7 @@ df[col] # Returns column with label col as Series
 df[[col1, col2]] # Returns columns as a new DataFrame
 s.iloc[0] # Selection by position
 s.loc['index_one'] # Selection by index
+df.loc[(df['col1'] == i) & (df['col2'] == j)]
 df.iloc[0,:] # First row
 df.iloc[0,0] # First element of first column
 ```
