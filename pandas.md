@@ -69,7 +69,7 @@ df.dropna() # Drop all rows that contain null values
 df.dropna(axis=1) # Drop all columns that contain null values
 df.dropna(axis=1,thresh=n) # Drop all rows have have less than n non null values
 df.fillna(x) # Replace all null values with x
-s.fillna(s.mean()) # Replace all null values with the mean (mean can be replaced with almost any function from the statistics module)
+s.fillna(s.mean()) # Replace all null values with the mean (or almost any function from the statistics module)
 s.astype(float) # Convert the datatype of the series to float
 s.replace(1,'one') # Replace all values equal to 1 with 'one'
 s.replace([1,3],['one','three']) # Replace all 1 with 'one' and 3 with 'three'
