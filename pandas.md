@@ -1,6 +1,6 @@
 ```python
-df # Any pandas DataFrame object
-s # Any pandas Series object
+df # pandas DataFrame 
+s  # pandas Series 
 
 import pandas as pd
 import numpy as np
