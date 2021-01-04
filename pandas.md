@@ -89,8 +89,9 @@ df.sort_values(col2,ascending=False) # Sort values by col2 in descending order
 df.sort_values([col1,col2],ascending=[True,False]) # Sort values by col1 in ascending order then col2 in descending order
 df.groupby(col) # Returns a groupby object for values from one column
 df.groupby([col1,col2]) # Returns groupby object for values from multiple columns
-df.groupby(col1)[col2] # Returns the mean of the values in col2, grouped by the values in col1 (mean can be replaced with almost any function from the statistics module)
-df.pivot_table(index=col1,values=[col2,col3],aggfunc=mean) # Create a pivot table that groups by col1 and calculates the mean of col2 and col3
+df.groupby(col1)[col2] # Returns the mean of the values in col2, grouped by the values in col1
+df.pivot_table(index=col1,values=[col2,col3],aggfunc=mean) # Create a pivot table that groups by col1 and 
+# calculates the mean of col2 and col3
 df.groupby(col1).agg(np.mean) # Find the average across all columns for every unique col1 group
 df.apply(np.mean) # Apply the function np.mean() across each column
 nf.apply(np.max,axis=1) # Apply the function np.max() across each row
@@ -101,7 +102,8 @@ nf.apply(np.max,axis=1) # Apply the function np.max() across each row
 ```python
 df1.append(df2) # Add the rows in df1 to the end of df2 (columns should be identical)
 pd.concat([df1, df2],axis=1) # Add the columns in df1 to the end of df2 (rows should be identical)
-df1.join(df2,on=col1,how='inner') # SQL-style join the columns in df1 with the columns on df2 where the rows for col have identical values. 'how' can be one of 'left', 'right', 'outer', 'inner'
+df1.join(df2,on=col1,how='inner') # SQL-style join the columns in df1 with the columns on df2 
+# where the rows for col have identical values. 'how' can be one of 'left', 'right', 'outer', 'inner'
 ```
 
 # Statistics
