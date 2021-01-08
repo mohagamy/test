@@ -21,14 +21,21 @@ np.random.rand(6,7)*100 # 6x7 array of random floats between 0–100
 np.random.randint(5,size=(2,3)) # 2x3 array with random ints between 0–4
 ```
 
-# Inspecting Properties
+#  Attributes
+
 ```python
+a.ndim # 2 rows (axis=0) and columns (axis=1)
 arr.size # Returns number of elements in arr
 arr.shape # Returns dimensions of arr (rows,columns)
 arr.dtype # Returns type of elements in arr
 arr.astype(dtype) # Convert arr elements to type dtype
 arr.tolist() # Convert arr to a Python list
 np.info(np.eye) # View documentation for np.eye
+a.itemsize # 8  = size (in bytes) of each element
+a.T # The transposed array.
+a.flat # 1-D iterator over the array.
+a.imag # The imaginary part of the array.
+a.real # The real part of the array.
 ```
 
 # Copying/sorting/reshaping
@@ -111,23 +118,6 @@ np.var(arr) # Returns the variance of array
 np.std(arr,axis=1) # Returns the standard deviation of specific axis
 arr.corrcoef() # Returns correlation coefficient of array
 ```
-
-#  Attributes
-
-```python
-import numpy as np
-a = np.zeros([2,3])
-a.ndim # 2 rows (axis=0) and columns (axis=1)
-a.shape # (2, 3)
-a.size # 6
-a.dtype #  dtype('float64')
-a.itemsize # 8  = size (in bytes) of each element
-a.T # The transposed array.
-a.flat # 1-D iterator over the array.
-a.imag # The imaginary part of the array.
-a.real # The real part of the array.
-```
-
 
 # Methods
 
