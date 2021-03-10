@@ -78,7 +78,7 @@ df.rename(columns=lambda x: x + 1) # Mass renaming of columns
 df.rename(columns={'old_name': 'new_ name'}) # Selective renaming
 df.set_index('column_one') # Change the index
 df.rename(index=lambda x: x + 1) # Mass renaming of index
-df.drop(['B', 'C'], axis=1) # Delete column from pandas DataFrame
+df = df.drop(['B', 'C'], axis=1) # Delete column from pandas DataFrame
 ```
 
 # Filter, Sort, and Groupby
